@@ -1,0 +1,12 @@
+import sys
+
+sys.path.append("/Users/voffkal/Desktop/Jupiter_practice/ML_deployments/production_model_package/")
+import pytest
+
+from regression_model.config.core import config
+from regression_model.processing.data_manager import load_dataset
+
+
+@pytest.fixture()
+def sample_input_data():
+    return load_dataset(filename=config.app_config.test_data_file)

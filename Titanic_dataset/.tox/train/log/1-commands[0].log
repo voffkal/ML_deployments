@@ -1,0 +1,23 @@
+name: train
+run_id: commands[0]
+env COLUMNS: 100
+env HOME: /Users/voffkal
+env LANG: C.UTF-8
+env LINES: 27
+env PATH: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/.tox/test_package/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/voffkal/miniforge3/envs/ML/bin:/Users/voffkal/miniforge3/condabin:/Users/voffkal/.gem/ruby/3.2.2/bin:/Users/voffkal/.rubies/ruby-3.2.2/lib/ruby/gems/3.2.0/bin:/Users/voffkal/.rubies/ruby-3.2.2/bin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin
+env PIP_DISABLE_PIP_VERSION_CHECK: 1
+env PYTHONHASHSEED: 726265111
+env PYTHONIOENCODING: utf-8
+env PYTHONPATH: ,
+env SSH_AUTH_SOCK: ***************************************************
+env TERM: xterm-256color
+env TMPDIR: /var/folders/mh/fjkkw3p5571cvcvl6ccpwlm80000gn/T/
+env TOX_ENV_DIR: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/.tox/test_package
+env TOX_ENV_NAME: train
+env TOX_WORK_DIR: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/.tox
+env VIRTUAL_ENV: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/.tox/test_package
+metadata pid: 48266
+cwd: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset
+allow: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/.tox/test_package/bin/*
+cmd: python classification_model/train_pipeline.py
+exit_code: 0

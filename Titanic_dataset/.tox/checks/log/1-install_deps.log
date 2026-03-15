@@ -1,0 +1,64 @@
+name: checks
+run_id: install_deps
+env COLUMNS: 154
+env HOME: /Users/voffkal
+env LANG: C.UTF-8
+env LINES: 30
+env PATH: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/.tox / checks/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/voffkal/miniforge3/envs/ml/bin:/Users/voffkal/miniforge3/condabin:/Users/voffkal/.gem/ruby/3.2.2/bin:/Users/voffkal/.rubies/ruby-3.2.2/lib/ruby/gems/3.2.0/bin:/Users/voffkal/.rubies/ruby-3.2.2/bin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin
+env PIP_DISABLE_PIP_VERSION_CHECK: 1
+env PYTHONHASHSEED: 3575463114
+env PYTHONIOENCODING: utf-8
+env SSH_AUTH_SOCK: ***************************************************
+env TERM: xterm-256color
+env TMPDIR: /var/folders/mh/fjkkw3p5571cvcvl6ccpwlm80000gn/T/
+env TOX_ENV_DIR: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/.tox / checks
+env TOX_ENV_NAME: checks
+env TOX_WORK_DIR: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/.tox
+env VIRTUAL_ENV: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/.tox / checks
+metadata pid: 59069
+cwd: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset
+allow: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/.tox / checks/bin/*
+cmd: python -m pip install -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt
+exit_code: 0
+Collecting black==23.3.0 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 1))
+  Using cached black-23.3.0-cp311-cp311-macosx_10_16_universal2.whl.metadata (61 kB)
+Collecting flake8<7.0.0,>=6.0.0 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 3))
+  Downloading flake8-6.1.0-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting mypy==1.3.0 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 5))
+  Using cached mypy-1.3.0-cp311-cp311-macosx_11_0_arm64.whl.metadata (1.9 kB)
+Collecting isort<6.0.0,>=5.11.4 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 7))
+  Downloading isort-5.13.2-py3-none-any.whl.metadata (12 kB)
+Collecting click>=8.0.0 (from black==23.3.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 1))
+  Using cached click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting mypy-extensions>=0.4.3 (from black==23.3.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 1))
+  Using cached mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting packaging>=22.0 (from black==23.3.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 1))
+  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pathspec>=0.9.0 (from black==23.3.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 1))
+  Using cached pathspec-1.0.4-py3-none-any.whl.metadata (13 kB)
+Collecting platformdirs>=2 (from black==23.3.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 1))
+  Downloading platformdirs-4.9.2-py3-none-any.whl.metadata (4.7 kB)
+Collecting typing-extensions>=3.10 (from mypy==1.3.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 5))
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting mccabe<0.8.0,>=0.7.0 (from flake8<7.0.0,>=6.0.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 3))
+  Using cached mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting pycodestyle<2.12.0,>=2.11.0 (from flake8<7.0.0,>=6.0.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 3))
+  Downloading pycodestyle-2.11.1-py2.py3-none-any.whl.metadata (4.5 kB)
+Collecting pyflakes<3.2.0,>=3.1.0 (from flake8<7.0.0,>=6.0.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/Titanic_dataset/requirements/typing_requirements.txt (line 3))
+  Downloading pyflakes-3.1.0-py2.py3-none-any.whl.metadata (3.5 kB)
+Using cached black-23.3.0-cp311-cp311-macosx_10_16_universal2.whl (2.6 MB)
+Using cached mypy-1.3.0-cp311-cp311-macosx_11_0_arm64.whl (9.7 MB)
+Downloading flake8-6.1.0-py2.py3-none-any.whl (58 kB)
+Downloading isort-5.13.2-py3-none-any.whl (92 kB)
+Using cached mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Downloading pycodestyle-2.11.1-py2.py3-none-any.whl (31 kB)
+Downloading pyflakes-3.1.0-py2.py3-none-any.whl (62 kB)
+Using cached click-8.3.1-py3-none-any.whl (108 kB)
+Using cached mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+Using cached packaging-26.0-py3-none-any.whl (74 kB)
+Using cached pathspec-1.0.4-py3-none-any.whl (55 kB)
+Downloading platformdirs-4.9.2-py3-none-any.whl (21 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Installing collected packages: typing-extensions, pyflakes, pycodestyle, platformdirs, pathspec, packaging, mypy-extensions, mccabe, isort, click, mypy, flake8, black
+[?25l[2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━[0m [32m 9/13[0m [click][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━[0m [32m10/13[0m [mypy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━[0m [32m10/13[0m [mypy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━[0m [32m10/13[0m [mypy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━[0m [32m12/13[0m [black][2K   [38;5;70m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m13/13[0m [black]
+[?25h[1A[2KSuccessfully installed black-23.3.0 click-8.3.1 flake8-6.1.0 isort-5.13.2 mccabe-0.7.0 mypy-1.3.0 mypy-extensions-1.1.0 packaging-26.0 pathspec-1.0.4 platformdirs-4.9.2 pycodestyle-2.11.1 pyflakes-3.1.0 typing-extensions-4.15.0
