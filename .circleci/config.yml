@@ -1,0 +1,98 @@
+version: '2.1'
+orbs:
+  node: circleci/node@5.1.0
+
+defaults: &defaults
+  docker:
+    - image: cimg/python:3.11.1
+  working_directory: ~/project
+
+prepare_venv: &prepare_venv
+  run:
+    name: Create venv
+    command: |
+      python -m venv venv
+      source /venv/bin/activate
+      pip install --upgrade pip
+
+prepare_tox: &prepare_tox
+  run:
+    name: Install tox
+    command: |
+      pip install --user tox
+
+jobs:
+  test_app:
+    <<: *defaults
+    working_directory: ~/project/deploying_with_containers/houseprice
+    steps:
+      - checkout:
+          path: ~/project
+      - *prepare_tox
+      - run:
+          name: Running app tests
+          command: |
+            tox
+
+  deploy_app_container_via_railway:
+    <<: *defaults
+    steps:
+      - setup_remote_docker:
+          version: edge
+      - checkout:
+          path: ~/project/
+
+      - node/install:
+          node-version: '22.18'
+
+      - run: node --version
+      - run: npm i -g @railway/cli
+
+      - run:
+          name: Build and Dockerfile
+          command: |
+            cd deploying_with_containers && railway up --detach --service service_ID
+
+  test_and_upload_regression_model:
+    <<: *defaults
+    working_directory: ~/project/deploying_with_containers/model_package
+    steps:
+      - checkout:
+          path: ~/project
+      - *prepare_tox
+      - run:
+          name: Fetch the data
+          command: |
+            tox -e fetch_data
+      - run:
+          name: Test the model
+          command: |
+            tox
+      - run:
+          name: Publish model to Gemfury
+          command: |
+            tox -e publish_model
+
+tags_only: &tags_only
+  filters:
+    branches:
+      ignore: /.*/
+    tags:
+      only: /^.*/
+
+workflows:
+  version: 2
+  deploy_pipeline:
+    jobs:
+      - test_app
+      - deploy_app_containers_via_railway:
+          requires:
+            - test_app
+          filters:
+            branches:
+              only:
+                - main
+                - demo
+
+      - test_and_upload_regression_model:
+          <<: *tags_only

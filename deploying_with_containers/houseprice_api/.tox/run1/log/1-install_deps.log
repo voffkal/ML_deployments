@@ -1,182 +1,0 @@
-name: run1
-run_id: install_deps
-env COLUMNS: 55
-env HOME: /Users/voffkal
-env LANG: C.UTF-8
-env LINES: 61
-env PATH: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/.tox/test_app/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/voffkal/miniforge3/envs/ml/bin:/Users/voffkal/miniforge3/condabin:/Users/voffkal/.gem/ruby/3.2.2/bin:/Users/voffkal/.rubies/ruby-3.2.2/lib/ruby/gems/3.2.0/bin:/Users/voffkal/.rubies/ruby-3.2.2/bin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pmk/env/global/bin:/Library/Apple/usr/bin:/Applications/Obsidian.app/Contents/MacOS
-env PIP_DISABLE_PIP_VERSION_CHECK: 1
-env PYTHONHASHSEED: 3488491796
-env PYTHONIOENCODING: utf-8
-env PYTHONPATH: .
-env SSH_AUTH_SOCK: ***************************************************
-env TERM: xterm-256color
-env TMPDIR: /var/folders/mh/fjkkw3p5571cvcvl6ccpwlm80000gn/T/
-env TOX_ENV_DIR: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/.tox/test_app
-env TOX_ENV_NAME: run1
-env TOX_WORK_DIR: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/.tox
-env VIRTUAL_ENV: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/.tox/test_app
-metadata pid: 15636
-cwd: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api
-allow: /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/.tox/test_app/bin/*
-cmd: pip install -r test_requirements.txt
-exit_code: 0
-Processing ./local_wheels/vve_regression_model-0.0.2-py3-none-any.whl (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-Collecting uvicorn<0.30.0,>=0.20.0 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 1))
-  Using cached uvicorn-0.29.0-py3-none-any.whl.metadata (6.3 kB)
-Collecting pandas==2.0.2 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 2))
-  Using cached pandas-2.0.2-cp311-cp311-macosx_11_0_arm64.whl.metadata (18 kB)
-Collecting fastapi<1.0.0,>=0.88.0 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 3))
-  Using cached fastapi-0.135.1-py3-none-any.whl.metadata (30 kB)
-Collecting python-multipart<0.0.10,>=0.0.5 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 4))
-  Using cached python_multipart-0.0.9-py3-none-any.whl.metadata (2.5 kB)
-Collecting pydantic<1.12.0,>=1.10.4 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 5))
-  Using cached pydantic-1.10.26-cp311-cp311-macosx_11_0_arm64.whl.metadata (155 kB)
-Collecting typing_extensions<5.0.0,>=4.2.0 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 6))
-  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
-Collecting loguru<1.0.0,>=0.5.3 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 7))
-  Using cached loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
-Collecting pytest<8.0.0,>=7.3.0 (from -r test_requirements.txt (line 3))
-  Using cached pytest-7.4.4-py3-none-any.whl.metadata (7.9 kB)
-Collecting requests<2.50.0,>=2.28.0 (from -r test_requirements.txt (line 4))
-  Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
-Collecting httpx<0.50.0,>=0.23.2 (from -r test_requirements.txt (line 5))
-  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
-Collecting numpy==1.24.3 (from vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached numpy-1.24.3-cp311-cp311-macosx_11_0_arm64.whl.metadata (5.6 kB)
-Collecting pydantic<1.12.0,>=1.10.4 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 5))
-  Using cached pydantic-1.10.8-cp311-cp311-macosx_11_0_arm64.whl.metadata (146 kB)
-Collecting scikit-learn==1.2.2 (from vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached scikit_learn-1.2.2-cp311-cp311-macosx_12_0_arm64.whl.metadata (11 kB)
-Collecting strictyaml==1.7.3 (from vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached strictyaml-1.7.3-py3-none-any.whl.metadata (11 kB)
-Collecting ruamel.yaml==0.17.28 (from vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached ruamel.yaml-0.17.28-py3-none-any.whl.metadata (16 kB)
-Collecting feature_engine==1.6.0 (from vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached feature_engine-1.6.0-py2.py3-none-any.whl.metadata (8.7 kB)
-Collecting joblib==1.2.0 (from vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached joblib-1.2.0-py3-none-any.whl.metadata (5.3 kB)
-Collecting python-dateutil>=2.8.2 (from pandas==2.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 2))
-  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
-Collecting pytz>=2020.1 (from pandas==2.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 2))
-  Using cached pytz-2026.1.post1-py2.py3-none-any.whl.metadata (22 kB)
-Collecting tzdata>=2022.1 (from pandas==2.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 2))
-  Using cached tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
-Collecting scipy>=1.4.1 (from feature_engine==1.6.0->vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached scipy-1.17.1-cp311-cp311-macosx_14_0_arm64.whl.metadata (62 kB)
-Collecting statsmodels>=0.11.1 (from feature_engine==1.6.0->vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached statsmodels-0.14.6-cp311-cp311-macosx_11_0_arm64.whl.metadata (9.5 kB)
-Collecting ruamel.yaml.clib>=0.2.7 (from ruamel.yaml==0.17.28->vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached ruamel_yaml_clib-0.2.15-cp311-cp311-macosx_11_0_arm64.whl.metadata (3.5 kB)
-Collecting threadpoolctl>=2.0.0 (from scikit-learn==1.2.2->vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
-Collecting click>=7.0 (from uvicorn<0.30.0,>=0.20.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 1))
-  Using cached click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
-Collecting h11>=0.8 (from uvicorn<0.30.0,>=0.20.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 1))
-  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
-Collecting starlette>=0.46.0 (from fastapi<1.0.0,>=0.88.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 3))
-  Using cached starlette-0.52.1-py3-none-any.whl.metadata (6.3 kB)
-INFO: pip is looking at multiple versions of fastapi to determine which version is compatible with other requirements. This could take a while.
-Collecting fastapi<1.0.0,>=0.88.0 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 3))
-  Using cached fastapi-0.135.0-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.134.0-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.133.1-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.133.0-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.132.1-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.132.0-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.131.0-py3-none-any.whl.metadata (30 kB)
-INFO: pip is still looking at multiple versions of fastapi to determine which version is compatible with other requirements. This could take a while.
-  Using cached fastapi-0.130.0-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.129.2-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.129.1-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.129.0-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.128.8-py3-none-any.whl.metadata (30 kB)
-INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
-  Using cached fastapi-0.128.7-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.128.6-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.128.5-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.128.4-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.128.3-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.128.2-py3-none-any.whl.metadata (30 kB)
-Collecting starlette<0.51.0,>=0.40.0 (from fastapi<1.0.0,>=0.88.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 3))
-  Using cached starlette-0.50.0-py3-none-any.whl.metadata (6.3 kB)
-Collecting fastapi<1.0.0,>=0.88.0 (from -r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 3))
-  Using cached fastapi-0.128.1-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.128.0-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.127.1-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.127.0-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.126.0-py3-none-any.whl.metadata (30 kB)
-  Using cached fastapi-0.125.0-py3-none-any.whl.metadata (30 kB)
-Collecting annotated-doc>=0.0.2 (from fastapi<1.0.0,>=0.88.0->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 3))
-  Using cached annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
-Collecting iniconfig (from pytest<8.0.0,>=7.3.0->-r test_requirements.txt (line 3))
-  Using cached iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
-Collecting packaging (from pytest<8.0.0,>=7.3.0->-r test_requirements.txt (line 3))
-  Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
-Collecting pluggy<2.0,>=0.12 (from pytest<8.0.0,>=7.3.0->-r test_requirements.txt (line 3))
-  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
-Collecting charset_normalizer<4,>=2 (from requests<2.50.0,>=2.28.0->-r test_requirements.txt (line 4))
-  Using cached charset_normalizer-3.4.5-cp311-cp311-macosx_10_9_universal2.whl.metadata (39 kB)
-Collecting idna<4,>=2.5 (from requests<2.50.0,>=2.28.0->-r test_requirements.txt (line 4))
-  Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
-Collecting urllib3<3,>=1.21.1 (from requests<2.50.0,>=2.28.0->-r test_requirements.txt (line 4))
-  Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
-Collecting certifi>=2017.4.17 (from requests<2.50.0,>=2.28.0->-r test_requirements.txt (line 4))
-  Using cached certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
-Collecting anyio (from httpx<0.50.0,>=0.23.2->-r test_requirements.txt (line 5))
-  Using cached anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
-Collecting httpcore==1.* (from httpx<0.50.0,>=0.23.2->-r test_requirements.txt (line 5))
-  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
-Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 2))
-  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
-INFO: pip is looking at multiple versions of scipy to determine which version is compatible with other requirements. This could take a while.
-Collecting scipy>=1.4.1 (from feature_engine==1.6.0->vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached scipy-1.17.0-cp311-cp311-macosx_14_0_arm64.whl.metadata (62 kB)
-  Using cached scipy-1.16.3-cp311-cp311-macosx_14_0_arm64.whl.metadata (62 kB)
-  Using cached scipy-1.16.2-cp311-cp311-macosx_14_0_arm64.whl.metadata (62 kB)
-  Using cached scipy-1.16.1-cp311-cp311-macosx_14_0_arm64.whl.metadata (61 kB)
-  Using cached scipy-1.16.0-cp311-cp311-macosx_14_0_arm64.whl.metadata (61 kB)
-  Using cached scipy-1.15.3-cp311-cp311-macosx_14_0_arm64.whl.metadata (61 kB)
-Collecting patsy>=0.5.6 (from statsmodels>=0.11.1->feature_engine==1.6.0->vve-regression-model==0.0.2->-r /Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api/requirements.txt (line 8))
-  Using cached patsy-1.0.2-py2.py3-none-any.whl.metadata (3.6 kB)
-Using cached pydantic-1.10.8-cp311-cp311-macosx_11_0_arm64.whl (2.5 MB)
-Using cached pandas-2.0.2-cp311-cp311-macosx_11_0_arm64.whl (10.7 MB)
-Using cached feature_engine-1.6.0-py2.py3-none-any.whl (319 kB)
-Using cached joblib-1.2.0-py3-none-any.whl (297 kB)
-Using cached numpy-1.24.3-cp311-cp311-macosx_11_0_arm64.whl (13.8 MB)
-Using cached ruamel.yaml-0.17.28-py3-none-any.whl (109 kB)
-Using cached scikit_learn-1.2.2-cp311-cp311-macosx_12_0_arm64.whl (8.4 MB)
-Using cached strictyaml-1.7.3-py3-none-any.whl (123 kB)
-Using cached uvicorn-0.29.0-py3-none-any.whl (60 kB)
-Using cached fastapi-0.125.0-py3-none-any.whl (112 kB)
-Using cached python_multipart-0.0.9-py3-none-any.whl (22 kB)
-Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
-Using cached loguru-0.7.3-py3-none-any.whl (61 kB)
-Using cached pytest-7.4.4-py3-none-any.whl (325 kB)
-Using cached requests-2.32.5-py3-none-any.whl (64 kB)
-Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
-Using cached charset_normalizer-3.4.5-cp311-cp311-macosx_10_9_universal2.whl (279 kB)
-Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
-Using cached idna-3.11-py3-none-any.whl (71 kB)
-Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
-Using cached starlette-0.50.0-py3-none-any.whl (74 kB)
-Using cached anyio-4.12.1-py3-none-any.whl (113 kB)
-Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
-Using cached annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
-Using cached certifi-2026.2.25-py3-none-any.whl (153 kB)
-Using cached click-8.3.1-py3-none-any.whl (108 kB)
-Using cached h11-0.16.0-py3-none-any.whl (37 kB)
-Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
-Using cached pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
-Using cached ruamel_yaml_clib-0.2.15-cp311-cp311-macosx_11_0_arm64.whl (132 kB)
-Using cached scipy-1.15.3-cp311-cp311-macosx_14_0_arm64.whl (22.4 MB)
-Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
-Using cached statsmodels-0.14.6-cp311-cp311-macosx_11_0_arm64.whl (10.0 MB)
-Using cached packaging-26.0-py3-none-any.whl (74 kB)
-Using cached patsy-1.0.2-py2.py3-none-any.whl (233 kB)
-Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
-Using cached tzdata-2025.3-py2.py3-none-any.whl (348 kB)
-Using cached iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
-Installing collected packages: pytz, urllib3, tzdata, typing_extensions, threadpoolctl, six, ruamel.yaml.clib, python-multipart, pluggy, packaging, numpy, loguru, joblib, iniconfig, idna, h11, click, charset_normalizer, certifi, annotated-doc, uvicorn, scipy, ruamel.yaml, requests, python-dateutil, pytest, pydantic, patsy, httpcore, anyio, strictyaml, starlette, scikit-learn, pandas, httpx, statsmodels, fastapi, feature_engine, vve-regression-model
-[?25l[2K   [38;5;197m━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m 2/39[0m [tzdata][2K   [38;5;197m━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10/39[0m [numpy][2K   [38;5;197m━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10/39[0m [numpy][2K   [38;5;197m━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10/39[0m [numpy][2K   [38;5;197m━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10/39[0m [numpy][2K   [38;5;197m━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m10/39[0m [numpy][2K   [38;5;197m━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12/39[0m [joblib][2K   [38;5;197m━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m20/39[0m [uvicorn][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m21/39[0m [scipy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m21/39[0m [scipy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m21/39[0m [scipy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m21/39[0m [scipy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m21/39[0m [scipy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m21/39[0m [scipy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m21/39[0m [scipy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m21/39[0m [scipy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m21/39[0m [scipy][2K   [38;5;197m━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━[0m [32m22/39[0m [ruamel.yaml][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━━━━━━━━━━━[0m [32m25/39[0m [pytest][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━[0m [32m29/39[0m [anyio][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m32/39[0m [scikit-learn][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m32/39[0m [scikit-learn][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m32/39[0m [scikit-learn][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m32/39[0m [scikit-learn][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m32/39[0m [scikit-learn][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m33/39[0m [pandas][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━[0m [32m35/39[0m [statsmodels][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━[0m [32m35/39[0m [statsmodels][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━[0m [32m35/39[0m [statsmodels][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━[0m [32m35/39[0m [statsmodels][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━[0m [32m35/39[0m [statsmodels][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━[0m [32m35/39[0m [statsmodels][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━[0m [32m35/39[0m [statsmodels][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━[0m [32m35/39[0m [statsmodels][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━━━[0m [32m35/39[0m [statsmodels][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━[0m [32m36/39[0m [fastapi][2K   [38;5;197m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;197m╸[0m[38;5;237m━[0m [32m37/39[0m [feature_engine][2K   [38;5;70m━━━━━━━━━━━━━━━━━━━━━━━[0m [32m39/39[0m [vve-regression-model]
-[?25h[1A[2KSuccessfully installed annotated-doc-0.0.4 anyio-4.12.1 certifi-2026.2.25 charset_normalizer-3.4.5 click-8.3.1 fastapi-0.125.0 feature_engine-1.6.0 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 iniconfig-2.3.0 joblib-1.2.0 loguru-0.7.3 numpy-1.24.3 packaging-26.0 pandas-2.0.2 patsy-1.0.2 pluggy-1.6.0 pydantic-1.10.8 pytest-7.4.4 python-dateutil-2.9.0.post0 python-multipart-0.0.9 pytz-2026.1.post1 requests-2.32.5 ruamel.yaml-0.17.28 ruamel.yaml.clib-0.2.15 scikit-learn-1.2.2 scipy-1.15.3 six-1.17.0 starlette-0.50.0 statsmodels-0.14.6 strictyaml-1.7.3 threadpoolctl-3.6.0 typing_extensions-4.15.0 tzdata-2025.3 urllib3-2.6.3 uvicorn-0.29.0 vve-regression-model-0.0.2

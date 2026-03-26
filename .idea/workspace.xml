@@ -4,7 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48e49676-852e-4935-a99f-c493f798b21b" name="Changes" comment="" />
+    <list default="true" id="48e49676-852e-4935-a99f-c493f798b21b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/LanguageServersSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/MANIFEST.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/mypy.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/publish_model.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/pyproject.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/VERSION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/config/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/config/core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/datasets/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/pipeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/predict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/processing/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/processing/data_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/processing/features.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/processing/validation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/train_pipeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/trained_models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/trained_models/regression_model_output_v0.0.2.pkl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/requirements/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/requirements/test_requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/requirements/typing_requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/tests/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/tests/test_features.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/tests/test_prediction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/tox.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/.tox/run1/log/1-install_deps.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/.tox/run1/log/2-commands[0].log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/app/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/app/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/app/schemas/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/app/schemas/predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/app/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/app/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/tox.ini" beforeDir="false" afterPath="$PROJECT_DIR$/deploying_with_containers/houseprice_api/tox.ini" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +58,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/production_model_package/regression_model/datasets/train.csv" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/production_model_package/setup.py" root0="SKIP_INSPECTION" />
@@ -28,26 +72,34 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="38q9MHlZcRVdgITJOB83DnroCjX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.train_pipeline.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/voffkal/Library/Application Support/JetBrains/PyCharm2025.2/plugins/Shell Script/shellcheck&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/voffkal/Desktop/Jupiter_practice/ML_deployments/deploying_with_containers&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
+    "Python.train_pipeline.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SHELLCHECK.PATH": "/Users/voffkal/Library/Application Support/JetBrains/PyCharm2025.2/plugins/Shell Script/shellcheck",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/voffkal/Desktop/Jupiter_practice/ML_deployments/deploying_with_containers/model_package",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/deploying_with_containers/model_package" />
       <recent name="$PROJECT_DIR$/deploying_with_containers" />
       <recent name="$PROJECT_DIR$/server_and_deploy_via_REST_API/houseprice_api/local_wheels" />
     </key>

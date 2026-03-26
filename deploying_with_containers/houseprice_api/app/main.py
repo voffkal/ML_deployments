@@ -1,9 +1,3 @@
-import sys
-
-sys.path.append(
-    '/Users/voffkal/Desktop/Jupiter_practice/ML_deployments/server_and_deploy_via_REST_API/houseprice_api'
-)
-
 from typing import Any
 
 from fastapi import FastAPI, APIRouter, Request, Response
