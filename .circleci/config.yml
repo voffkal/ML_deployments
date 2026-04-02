@@ -12,7 +12,7 @@ prepare_venv: &prepare_venv
     name: Create venv
     command: |
       python -m venv venv
-      source /venv/bin/activate
+      source venv/bin/activate
       pip install --upgrade pip
 
 prepare_tox: &prepare_tox
