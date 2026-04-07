@@ -51,7 +51,7 @@ jobs:
       - run:
           name: Build and Dockerfile
           command: |
-              cd deploying_with_containers && railway up --detach --service service_ID
+              cd deploying_with_containers && railway up --detach --service b9e5e76c-f16d-4bbe-b933-b98cb98c07fc
 
   test_and_upload_regression_model:
     <<: *defaults
