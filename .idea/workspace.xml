@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48e49676-852e-4935-a99f-c493f798b21b" name="Changes" comment="Changes" />
+    <list default="true" id="48e49676-852e-4935-a99f-c493f798b21b" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/deploying_with_containers/model_package/regression_model/VERSION" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
