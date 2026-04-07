@@ -14,7 +14,7 @@ class Settings(BaseSettings):
 
     logging: LoggingSettings= LoggingSettings()
 
-    BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = [
+    BACKEND_CORS_ORIGINS: List[str] = [
         "https://localhost:3000",
         "http://localhost:3000",
         "https://localhost:8000",
