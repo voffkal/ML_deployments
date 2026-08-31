@@ -6,6 +6,9 @@ class PredictionResults(BaseModel):
     errors: Optional[Any]
     version: str
     predictions: Optional[List[float]]
+    # Ids of rows the model could not score because a required feature was
+    # missing, so the caller can align predictions with what it submitted.
+    dropped_ids: List[int] = []
 
 class MultipleHouseDataInputs(BaseModel):
 

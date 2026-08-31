@@ -19,13 +19,17 @@ def test_make_prediction(client: TestClient, test_data: pd.DataFrame) -> None:
     assert prediction_data['predictions']
     assert prediction_data['errors'] is None
 
-    # The model drops rows that are missing a required feature, so the
-    # response can be shorter than the request. It must never be longer,
-    # and it must not be empty.
-    # NOTE: the client currently cannot tell WHICH rows were dropped -
-    # see the TODO in regression_model/processing/validation.py. Once that
-    # is reported, tighten this into an exact per-row assertion.
+    # Rows missing a required feature cannot be scored, so the response can
+    # be shorter than the request - but every missing row must be accounted
+    # for by Id, so the caller can realign results with what it sent.
     assert 0 < len(prediction_data['predictions']) <= len(payload['inputs'])
+    assert len(prediction_data['predictions']) + len(
+        prediction_data['dropped_ids']
+    ) == len(payload['inputs'])
+
+    # Dropping a row is not a validation error: the shipped Kaggle test set
+    # always contains a few, and the request as a whole is still valid.
+    assert prediction_data['errors'] is None
 
     # rel_tol is RELATIVE: rel_tol=100 allowed a 100x deviation, which made
     # this assertion pass for any number at all (even a negative price).

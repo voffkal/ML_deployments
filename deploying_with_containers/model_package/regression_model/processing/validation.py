@@ -37,23 +37,14 @@ def validate_inputs(*, input_data: pd.DataFrame) -> Tuple[pd.DataFrame, Optional
 
     validated_data = drop_na_inputs(input_data=input_data)
 
-    # TODO(you): decide how dropped rows are reported to the caller.
-    #
-    # Context: drop_na_inputs() removes rows missing a required feature.
-    # Today those rows vanish and `errors` stays None, so the API answers
-    # 200 OK with FEWER predictions than the client sent (1449 vs 1459 on
-    # the shipped test set) and no way to tell which rows are missing.
-    #
-    # `dropped_index` below holds the row labels that were removed, and the
-    # data carries an `Id` column you can surface instead of positions.
-    #
-    # Write ~5-8 lines that turn this silent loss into something the caller
-    # can act on. Things to weigh:
-    #   - Is dropping a row an *error* (populate `errors`) or an expected
-    #     outcome that just needs reporting alongside a successful result?
-    #   - Should the caller get the row Ids, the positions, or a count?
-    #   - Does one unusable row invalidate the whole batch, or only itself?
-    dropped_index = input_data.index.difference(validated_data.index)  # noqa: F841
+    # Rows missing a required feature cannot be predicted. That is not a
+    # validation *error* - the shipped Kaggle test set always contains 10 of
+    # them - so record their Ids alongside the data instead of failing the
+    # batch, and let the caller decide what to do about them.
+    dropped_index = input_data.index.difference(validated_data.index)
+    validated_data.attrs["dropped_ids"] = (
+        input_data.loc[dropped_index, "Id"].tolist() if len(dropped_index) else []
+    )
 
     errors = None
 

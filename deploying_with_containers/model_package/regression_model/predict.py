@@ -20,16 +20,24 @@ def make_prediction(
 
     data = pd.DataFrame(input_data)
     validated_data, errors = validate_inputs(input_data=data)
-    results = {"prediction": None, "version": _version, "errors": errors}
+
+    # Ids of rows that could not be predicted because a required feature was
+    # missing. Empty list when every row went through.
+    dropped_ids = validated_data.attrs.get("dropped_ids", [])
+
+    # Always the same keys, so a caller never hits a KeyError on the error
+    # path: "predictions" stays plural whether or not anything was predicted.
+    results = {
+        "predictions": None,
+        "version": _version,
+        "errors": errors,
+        "dropped_ids": dropped_ids,
+    }
 
     if not errors:
         predictions = _price_pipe.predict(
             X=validated_data[config.model_config.features]
         )
-        results = {
-            "predictions": [np.exp(pred) for pred in predictions],  # type: ignore
-            "version": _version,
-            "errors": errors,
-        }
+        results["predictions"] = [np.exp(pred) for pred in predictions]  # type: ignore
 
     return results
