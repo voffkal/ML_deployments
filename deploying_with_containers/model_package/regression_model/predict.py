@@ -38,6 +38,6 @@ def make_prediction(
         predictions = _price_pipe.predict(
             X=validated_data[config.model_config.features]
         )
-        results["predictions"] = [np.exp(pred) for pred in predictions]  # type: ignore
+        results["predictions"] = [np.exp(pred) for pred in predictions]
 
     return results
