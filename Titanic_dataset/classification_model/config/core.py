@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Sequence
+from typing import Optional, Sequence
 
 from pydantic import BaseModel
 from strictyaml import YAML, load
@@ -41,7 +41,7 @@ def find_config_file():
     raise Exception(f"No config file found at {CONFIG_FILE_PATH}")
 
 
-def fetch_config_from_yaml(cfg_path: Path = None) -> YAML:
+def fetch_config_from_yaml(cfg_path: Optional[Path] = None) -> YAML:
     if not cfg_path:
         cfg_path = find_config_file()
     if cfg_path:
