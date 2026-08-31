@@ -4,10 +4,15 @@ RUN adduser --disabled-password --gecos '' ml-api-user
 
 WORKDIR /opt/houseprice_api
 
-ARG PIP_EXTRA_INDEX_URL
-
 ADD ./houseprice_api /opt/houseprice_api
+
+# The model package is downloaded from its GitHub Release before the build and
+# installed from the local wheel, so the image records exactly which trained
+# model it ships.
+COPY model_pkg/*.whl /tmp/
+
 RUN pip install --upgrade pip
+RUN pip install /tmp/*.whl
 RUN pip install -r /opt/houseprice_api/requirements.txt
 
 RUN chmod +x /opt/houseprice_api/run.sh

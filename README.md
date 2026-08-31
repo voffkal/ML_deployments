@@ -26,18 +26,24 @@ Measured on the split defined in each package's config, seeded via
 ## Architecture
 
 The model package is the unit of deployment: the API depends on it as an
-ordinary versioned dependency (`vve-regression-model==0.0.2`) installed from a
-private index, rather than importing source from a sibling directory.
+ordinary versioned artifact rather than importing source from a sibling
+directory.
 
 ```
-model_package  ──build──>  wheel  ──publish──>  private index
+model_package  ──build──>  wheel  ──publish──>  GitHub Release (model-v*)
                                                      │
-                                              pip install
+                                          gh release download
                                                      ↓
                                           houseprice_api (FastAPI)
                                                      │
                                                    Docker
 ```
+
+The course published that wheel to a private Gemfury index. This repo uses
+**GitHub Releases** instead - free, and it works the same way. `publish_model.sh`
+refuses to publish a wheel with no trained pipeline inside it: such a wheel
+imports cleanly and only fails on the first prediction, which is exactly the
+kind of break that reaches production unnoticed.
 
 This is what makes the API independently deployable and the model independently
 versioned: the pinned dependency records exactly which model a given API build
@@ -56,13 +62,19 @@ cd deploying_with_containers/houseprice_api && tox
 
 # container
 cd deploying_with_containers
-docker build --build-arg PIP_EXTRA_INDEX_URL="$PIP_EXTRA_INDEX_URL" -t houseprice-api .
+# fetch the model wheel from its release, then build
+TAG=$(gh release list --json tagName -q '[.[].tagName | select(startswith("model-v"))][0]')
+gh release download "$TAG" -D model_pkg -p '*.whl'
+docker build -t houseprice-api .
 docker run -p 8001:8001 houseprice-api
 ```
 
-`PIP_EXTRA_INDEX_URL` carries the credentials for the private package index and
-must come from the environment. Datasets are fetched from Kaggle and are not
-committed.
+Datasets are fetched from Kaggle (`tox -e fetch_data`) and are not committed;
+that step needs `KAGGLE_USERNAME` / `KAGGLE_KEY`. Publishing a release needs
+`GH_TOKEN`. Nothing secret is committed.
+
+CI runs every test suite on each push, and publishes a model release only on a
+tag - a release is an explicit act, not a side effect of pushing to main.
 
 Once running: `http://localhost:8001/docs` for the OpenAPI UI,
 `GET /api/v1/health` for a liveness check.

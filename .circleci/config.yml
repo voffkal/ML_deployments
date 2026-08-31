@@ -1,19 +1,9 @@
 version: '2.1'
-orbs:
-  node: circleci/node@5.1.0
 
 defaults: &defaults
   docker:
     - image: cimg/python:3.11.1
   working_directory: ~/project
-
-prepare_venv: &prepare_venv
-  run:
-    name: Create venv
-    command: |
-      python -m venv venv
-      source venv/bin/activate
-      pip install --upgrade pip
 
 prepare_tox: &prepare_tox
   run:
@@ -22,6 +12,33 @@ prepare_tox: &prepare_tox
       pip install --user tox
 
 jobs:
+  # The model package owns its own tests and runs them on every push, so a
+  # broken model surfaces immediately rather than at release time.
+  test_regression_model:
+    <<: *defaults
+    working_directory: ~/project/deploying_with_containers/model_package
+    steps:
+      - checkout:
+          path: ~/project
+      - *prepare_tox
+      - run:
+          name: Fetch the data
+          command: tox -e fetch_data
+      - run:
+          name: Test the model
+          command: tox
+
+  test_titanic_model:
+    <<: *defaults
+    working_directory: ~/project/Titanic_dataset
+    steps:
+      - checkout:
+          path: ~/project
+      - *prepare_tox
+      - run:
+          name: Test the classification model
+          command: tox
+
   test_app:
     <<: *defaults
     working_directory: ~/project/deploying_with_containers/houseprice_api
@@ -31,30 +48,11 @@ jobs:
       - *prepare_tox
       - run:
           name: Running app tests
-          command: |
-            tox
+          command: tox
 
-  deploy_app_container_via_railway:
-    <<: *defaults
-    steps:
-      - setup_remote_docker:
-          version: edge
-      - checkout:
-          path: ~/project/
-
-      - node/install:
-          node-version: '22.18'
-
-      - run: node --version
-      - run: npm i -g @railway/cli
-
-      - run:
-          name: Build and Dockerfile
-          command: |
-              # Service id comes from the environment, not the repo.
-              cd deploying_with_containers && railway up --detach --service "$RAILWAY_SERVICE_ID"
-
-  test_and_upload_regression_model:
+  # Publishing is tag-only: a release is an explicit act, not a side effect
+  # of pushing to main.
+  publish_regression_model:
     <<: *defaults
     working_directory: ~/project/deploying_with_containers/model_package
     steps:
@@ -63,16 +61,10 @@ jobs:
       - *prepare_tox
       - run:
           name: Fetch the data
-          command: |
-            tox -e fetch_data
+          command: tox -e fetch_data
       - run:
-          name: Test the model
-          command: |
-            tox
-      - run:
-          name: Publish model to Gemfury
-          command: |
-            tox -e publish_model
+          name: Publish model package as a GitHub Release
+          command: tox -e publish_model
 
 tags_only: &tags_only
   filters:
@@ -83,17 +75,13 @@ tags_only: &tags_only
 
 workflows:
   version: 2
-  deploy_pipeline:
+  test-all:
     jobs:
+      - test_regression_model
+      - test_titanic_model
       - test_app
-      - deploy_app_container_via_railway:
-          requires:
-            - test_app
-          filters:
-            branches:
-              only:
-                - main
-                - demo
 
-      - test_and_upload_regression_model:
+  release:
+    jobs:
+      - publish_regression_model:
           <<: *tags_only

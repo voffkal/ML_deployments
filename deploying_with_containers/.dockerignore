@@ -8,3 +8,6 @@ packages/regression_model
 .git
 .gitignore
 .tox
+
+# holds the wheel fetched from the GitHub Release - the build needs it
+!model_pkg
