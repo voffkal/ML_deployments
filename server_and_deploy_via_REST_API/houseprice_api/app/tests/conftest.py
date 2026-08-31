@@ -10,7 +10,14 @@ from app.main import app
 
 @pytest.fixture(scope='module')
 def test_data() -> pd.DataFrame:
-    return load_dataset(file_name=config.app_config.test_data_file)
+    try:
+        return load_dataset(file_name=config.app_config.test_data_file)
+    except FileNotFoundError:  # pragma: no cover - setup guidance
+        pytest.skip(
+            f"dataset '{config.app_config.test_data_file}' is missing. "
+            "It is fetched from Kaggle, not committed: run "
+            "`tox -e fetch_data` in the model package first."
+        )
 
 @pytest.fixture()
 def client() -> Generator:
